@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Textile Job Work Manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: '#f5f3ff',
+                100: '#ede9fe',
+                200: '#ddd6fe',
+                300: '#c4b5fd',
+                400: '#a78bfa',
+                500: '#8b5cf6',
+                600: '#7c3aed',
+                700: '#6d28d9',
+                800: '#5b21b6',
+                900: '#4c1d95',
+                950: '#2e1065',
+              },
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "recharts": "https://aistudiocdn.com/recharts@^3.3.0"
+  }
+}
+</script>
+<style>
+  @media print {
+    body {
+      background-color: white !important;
+      -webkit-print-color-adjust: exact;
+      color-adjust: exact;
+    }
+    header, button, input, select, .no-print {
+      display: none !important;
+    }
+    main {
+      padding: 0.5in !important;
+      margin: 0 !important;
+    }
+    .printable-content {
+      box-shadow: none !important;
+      border: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    h1 {
+      font-size: 20pt !important;
+      margin-bottom: 0.5in;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9pt;
+    }
+    th, td {
+      border: 1px solid #666;
+      padding: 0.1in;
+      text-align: left;
+    }
+    thead {
+      background-color: #eee !important;
+      display: table-header-group; /* Ensure header repeats on each page */
+    }
+    tr {
+      page-break-inside: avoid;
+    }
+    .status-page-print table {
+        font-size: 7pt;
+    }
+    @page {
+        size: A4 landscape;
+        margin: 0.5in;
+    }
+  }
+</style>
+</head>
+  <body class="bg-gray-50 dark:bg-gray-900">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
